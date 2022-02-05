@@ -84,7 +84,7 @@ function Post({ id, username, userImg, img, caption }) {
   };
 
   return (
-    <div className="my-6 rounded-sm border bg-white">
+    <div className="my-7 rounded-sm border bg-white">
       {/* Header */}
       <div className="flex items-center p-3">
         <img
