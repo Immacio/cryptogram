@@ -12,6 +12,7 @@ import { useSession, signIn, signOut } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { useRecoilState } from 'recoil';
 import { modalState } from '../atoms/modalAtom';
+import { MdSettingsEthernet } from 'react-icons/md';
 
 function Header() {
   const { data: session } = useSession();
@@ -24,24 +25,17 @@ function Header() {
         {/* Left */}
         <div
           onClick={() => router.push('/')}
-          className="relative hidden w-24 cursor-pointer lg:inline-grid"
+          className="relative hidden cursor-pointer items-center space-x-1 lg:inline-flex"
         >
-          <Image
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/2880px-Instagram_logo.svg.png"
-            layout="fill"
-            objectFit="contain"
-          />
+          <MdSettingsEthernet size="2.5rem" />
+          <h3 className="text-lg font-bold">CryptoGram</h3>
         </div>
 
         <div
           onClick={() => router.push('/')}
-          className="relative w-10 flex-shrink-0 cursor-pointer lg:hidden"
+          className="relative flex w-10 flex-shrink-0 cursor-pointer items-center lg:hidden"
         >
-          <Image
-            src="https://links.papareact.com/jjm"
-            objectFit="contain"
-            layout="fill"
-          />
+          <MdSettingsEthernet size="2.5rem" />
         </div>
         {/* Middle - search input */}
         <div className="max-w-xs">

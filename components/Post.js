@@ -119,7 +119,7 @@ function Post({ id, username, userImg, img, caption }) {
       )}
 
       {/* Caption */}
-      <p className="truncate px-5 py-1">
+      <p className="px-5 py-3">
         {likes.length > 0 && (
           <p className="mr-1 pb-2 font-bold">{likes.length} likes</p>
         )}
@@ -129,7 +129,7 @@ function Post({ id, username, userImg, img, caption }) {
 
       {/* Comments */}
       {comments.length > 0 && (
-        <div className="ml-6 h-20 overflow-y-scroll py-2 scrollbar-thin scrollbar-thumb-black">
+        <div className=" ml-6 mb-5 h-20 overflow-y-scroll py-2 scrollbar-thin scrollbar-thumb-black">
           {comments.map((comment) => (
             <div className="mb-3 flex items-center space-x-2" key={comment.id}>
               <img
