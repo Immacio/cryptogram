@@ -21,11 +21,11 @@ function Header() {
 
   return (
     <div className="sticky top-0 z-50 border-b bg-white shadow-md">
-      <div className="mx-5 flex max-w-5xl justify-between lg:mx-auto">
+      <div className="mx-5 flex max-w-5xl justify-between lg:mx-auto lg:max-w-6xl">
         {/* Left */}
         <div
           onClick={() => router.push('/')}
-          className="relative hidden cursor-pointer items-center space-x-1 lg:inline-flex"
+          className="relative hidden cursor-pointer items-center space-x-1 md:inline-flex"
         >
           <MdSettingsEthernet size="2.5rem" />
           <h3 className="text-lg font-bold">CryptoGram</h3>
@@ -33,7 +33,7 @@ function Header() {
 
         <div
           onClick={() => router.push('/')}
-          className="relative flex w-10 flex-shrink-0 cursor-pointer items-center lg:hidden"
+          className="relative flex w-10 flex-shrink-0 cursor-pointer items-center md:hidden"
         >
           <MdSettingsEthernet size="2.5rem" />
         </div>
