@@ -79,7 +79,9 @@ function Header() {
               />
             </>
           ) : (
-            <button onClick={signIn}>Sign In</button>
+            <button className="text-sm" onClick={signIn}>
+              Sign In
+            </button>
           )}
         </div>
       </div>

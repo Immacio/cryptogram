@@ -5,7 +5,7 @@ import Modal from '../components/Modal';
 
 export default function Home() {
   return (
-    <div className="h-screen overflow-y-scroll bg-gray-50 scrollbar-hide">
+    <div className="h-screen bg-gray-50 scrollbar-hide">
       <Head>
         <title>CryptoGram</title>
         <link rel="icon" href="/favicon.ico" />
