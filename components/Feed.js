@@ -4,25 +4,13 @@ import MiniProfile from './MiniProfile';
 import Suggestions from './Suggestions';
 import PriceTracker from './PriceTracker';
 import { useSession } from 'next-auth/react';
-import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { useRecoilValueLoadable_TRANSITION_SUPPORT_UNSTABLE } from 'recoil';
+import { useFetchCoin } from './hooks';
 
 export default function Feed() {
   const { data: session } = useSession();
-  const [coinData, setCoinData] = useState([]);
-  const coinAPI =
-    'https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=10&page=1&sparkline=false';
-
-  useEffect(() => {
-    coinDataFetch();
-  }, []);
-
-  const coinDataFetch = async () => {
-    const response = await fetch(coinAPI);
-    const jsonData = await response.json();
-    setCoinData(jsonData);
-  };
+  // Custom hook for pulling in crypto coin data
+  const coinData = useFetchCoin();
 
   return (
     <main
